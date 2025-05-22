@@ -25,8 +25,8 @@ public class LoginAsporRiesgoSteps extends BaseTestRiesgo {
 		
 	}
 
-	@When("El usuario ingresa las credenciales como usuario {string} y contraseña {string}")
-	public void el_usuario_ingresa_las_credenciales_como_usuario_y_contraseña(String user, String pass) throws InterruptedException {
+	@When("El usuario ingresa las credenciales como usuario {string} y contrasena {string}")
+	public void el_usuario_ingresa_las_credenciales_como_usuario_y_contrasena(String user, String pass) throws InterruptedException {
 		loginAsporRiesgo.enterUsername(user);
 		loginAsporRiesgo.enterPassword(pass);
 	}
