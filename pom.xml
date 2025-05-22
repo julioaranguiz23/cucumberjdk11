@@ -37,6 +37,33 @@
             <version>5.8.0</version>
         </dependency>
 
+             <!-- Cucumber Java -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>7.14.0</version>
+    <scope>test</scope>
+</dependency>
+
+<!-- Cucumber JUnit -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-junit</artifactId>
+    <version>7.14.0</version>
+    <scope>test</scope>
+</dependency>
+
+<!-- Cucumber JUnit Platform Engine (si usas JUnit 5, opcional si estás en JUnit 4) -->
+<!--
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-junit-platform-engine</artifactId>
+    <version>7.14.0</version>
+    <scope>test</scope>
+</dependency>
+-->
+
+
         <!-- ExtentReports -->
         <dependency>
             <groupId>com.aventstack</groupId>
