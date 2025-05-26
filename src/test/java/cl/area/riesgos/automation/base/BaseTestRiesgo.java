@@ -7,6 +7,15 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 //Este es el corazón que arranca y cierra el navegador.
 
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+  features = "src/test/resources/features",
+  glue = "cl.area.riesgos.automation.steps",
+  tags = "@LoginAsporRiesgo",
+  plugin = {"pretty", "html:target/cucumber-reports.html"}
+)
+    
 public class BaseTestRiesgo {
     // WebDriver compartido por todos los escenarios
     protected static WebDriver driver;
