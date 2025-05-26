@@ -32,7 +32,7 @@ public class BaseTestRiesgo {
         options.addArguments("--headless", "--disable-gpu");
         
         driver = new ChromeDriver(options);               // abre una nueva instancia de Chrome
-        driver.manage().window().maximize();       //  maximiza la ventana
+        //driver.manage().window().maximize();       //  maximiza la ventana
     }
 
     /**
