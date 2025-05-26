@@ -20,7 +20,7 @@ public class BaseTestRiesgo {
         WebDriverManager.chromedriver().setup();   // ☕ instala el binario de Chrome
         
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+        options.addArguments("--headless", "--disable gpu");
         
         driver = new ChromeDriver(options);               // 🚀 abre una nueva instancia de Chrome
         driver.manage().window().maximize();       // 📏 maximiza la ventana
