@@ -5,8 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-//Este es el corazón que arranca y cierra el navegador.
-
+import org.junit.runner.RunWith; // <- FALTABA ESTE IMPORT
+import io.cucumber.junit.Cucumber; // <- FALTABA ESTE IMPORT
+import io.cucumber.junit.CucumberOptions; // <- FALTABA ESTE IMPORT
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -15,33 +16,19 @@ import org.openqa.selenium.chrome.ChromeOptions;
   tags = "@LoginAsporRiesgo",
   plugin = {"pretty", "html:target/cucumber-reports.html"}
 )
-    
 public class BaseTestRiesgo {
-    // WebDriver compartido por todos los escenarios
     protected static WebDriver driver;
 
-    /**
-     * Inicializa el navegador Chrome antes de cada escenario.
-     * - WebDriverManager descarga y configura el driver automáticamente.
-     * - Maximiza ventana para evitar problemas de visibilidad.
-     */
     public static void initBrowser() {
-        WebDriverManager.chromedriver().setup();   // instala el binario de Chrome
-        
+        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless", "--disable-gpu");
-        
-        driver = new ChromeDriver(options);               // abre una nueva instancia de Chrome
-        //driver.manage().window().maximize();       //  maximiza la ventana
+        driver = new ChromeDriver(options);
     }
 
-    /**
-     * Cierra el navegador al terminar cada escenario.
-     * Protege contra NullPointer si algo falló antes de initBrowser().
-     */
     public void tearDown() {
         if (driver != null) {
-            driver.quit(); // cierra todas las ventanas y termina el proceso
+            driver.quit();
         }
     }
 }
