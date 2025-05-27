@@ -14,14 +14,14 @@ public class LoginAsporRiesgoSteps extends BaseTestRiesgo {
 	
 	  @Before
 	    public void setUp() {
-	        initBrowser();                 // ⚙️ arranca o inicia Chrome
-			loginAsporRiesgo = new LoginAsporRiesgo(driver); // 📦 instancia tu Page Object
-	        loginAsporRiesgo.open(); // 🚪 voy al URL de login
+	        initBrowser();                 //arranca o inicia Chrome
+		loginAsporRiesgo = new LoginAsporRiesgo(driver); //instancia tu Page Object
+	        loginAsporRiesgo.open(); //voy al URL de login
 	    }
 
 	@Given("El usuario esta en el Home Page y hace click en Mi Portal")
 	public void el_usuario_esta_en_el_home_page_y_hace_click_en_mi_portal() throws InterruptedException {
-			loginAsporRiesgo.MiPortalBtn();
+		loginAsporRiesgo.MiPortalBtn();
 		
 	}
 
@@ -29,6 +29,7 @@ public class LoginAsporRiesgoSteps extends BaseTestRiesgo {
 	public void el_usuario_ingresa_las_credenciales_como_usuario_y_contrasena(String user, String pass) throws InterruptedException {
 		loginAsporRiesgo.enterUsername(user);
 		loginAsporRiesgo.enterPassword(pass);
+		System.out.println("Hola usuario bienvenido");
 	}
 	
 	@When("El usuario hace click en Ingresar")
