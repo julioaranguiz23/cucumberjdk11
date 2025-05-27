@@ -5,8 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 //Encapsula selectores y acciones de una pantalla.
 
-		public class LoginAsporRiesgo {
-			private WebDriver driver;
+            public class LoginAsporRiesgo {
+	    private WebDriver driver;
 	 
 // — Selectores de los elementos de la UI —
 	 
@@ -23,6 +23,7 @@ import org.openqa.selenium.WebDriver;
 	  /** Abre la URL de login en el navegador */
 	    public void open() {
 	        driver.get("https://demo.aspor.cl/");
+		System.out.println("Se ingresa al portal de aspor");
 	    }
 	    /** Hace clic en el botón de Mi Portal 
 	     * @throws Exception */
